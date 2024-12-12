@@ -142,8 +142,8 @@ class ChatBotApp:
             index_name="vector_index1"
         )
         self.chatbot = ChatBot(
-            db_url="mongodb://localhost:27017/",
-            db_name="chatbot_db",
+            db_url="mongodb+srv://projectworkdemo2020:gBoBQogr4VpMa9IB@cluster0.o19y3.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0&ssl=true",
+            db_name="rag_db3",
             collection_name="chat_history",
             hf_token="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"
         )
