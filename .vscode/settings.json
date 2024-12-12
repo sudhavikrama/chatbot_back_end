@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/3d58fe33-3f93-4da4-ba26-5786dd0f0b59/resourceGroups/chatboardAI/providers/Microsoft.Web/sites/AIchatapp",
+    "appService.deploySubpath": "."
+}
