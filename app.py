@@ -2,7 +2,7 @@
 import os
 import time
 from datetime import datetime
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify,render_template
 from flask_cors import CORS
 from huggingface_hub import InferenceClient
 from pymongo import MongoClient
@@ -155,6 +155,10 @@ class ChatBotApp:
     def _setup_routes(self):
         self.app.add_url_rule('/query', 'search_data', self.search_data, methods=['POST'])
         self.app.add_url_rule('/update-chat', 'update_chat_history', self.update_chat_history, methods=['POST'])
+        self.app.add_url_rule('/','index',self.index)
+    def index():
+        print('Request for index page received')
+       return render_template('index.html')
 
     def search_data(self):
         data = request.json
